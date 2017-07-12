@@ -49,10 +49,18 @@ def get_standard_rebels(roster):
     standard_rebels_set = {"Princess Leia", "Lando Calrissian", "Biggs Darklighter", "Wedge Antilles", "Admiral Ackbar"}
     return get_haat_squad(roster, standard_rebels_set)
 
+def get_tiepatine(roster):
+    standard_rebels_set = {"Emperor Palpatine", "TIE Fighter Pilot", "Royal Guard", "Sun Fac", "Stormtrooper Han"}
+    return get_haat_squad(roster, standard_rebels_set)
+
 roster = get_all_toons()
 
 standard_rebels = get_standard_rebels(roster)
 
+tiepatine = get_tiepatine(roster)
+
 print(standard_rebels)
+
+print(tiepatine)
 
 
