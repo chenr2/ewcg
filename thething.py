@@ -3,8 +3,6 @@ from bs4 import BeautifulSoup
 with open("fishy.html") as fp:
     soup = BeautifulSoup(fp, 'html.parser')
 
-all_toons = soup.find_all(attrs={"class": "char-portrait-full-link"})
-
 def translate_gear(gear_string):
     if gear_string == "XI":
         return 11
@@ -31,10 +29,30 @@ def translate_gear(gear_string):
     else:
         return 1
 
-for toon in all_toons:
-    toon_name = toon.img['alt']
-    gear_level = translate_gear(toon.find(attrs={"class": "char-portrait-full-gear-level"}).string)
-    if gear_level > 8:
-        print(toon_name)
-        print(gear_level)
-        print("--")
+def get_all_toons():
+    all_toons = soup.find_all(attrs={"class": "char-portrait-full-link"})
+    all_toon_tuples = []
+    for toon in all_toons:
+        toon_name = toon.img['alt']
+        gear_level = translate_gear(toon.find(attrs={"class": "char-portrait-full-gear-level"}).string)
+        all_toon_tuples.append((toon_name, gear_level))
+    return all_toon_tuples
+
+def get_haat_squad(roster, haat_squad_set):
+    haat_squad = []
+    for toon in roster:
+        if toon[0] in haat_squad_set:
+            haat_squad.append(toon)
+    return haat_squad
+
+def get_standard_rebels(roster):
+    standard_rebels_set = {"Princess Leia", "Lando Calrissian", "Biggs Darklighter", "Wedge Antilles", "Admiral Ackbar"}
+    return get_haat_squad(roster, standard_rebels_set)
+
+roster = get_all_toons()
+
+standard_rebels = get_standard_rebels(roster)
+
+print(standard_rebels)
+
+
