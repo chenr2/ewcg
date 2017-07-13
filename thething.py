@@ -1,6 +1,8 @@
+#  wget -O bhartman.html https://swgoh.gg/u/bhartman1002/collection/
+
 from bs4 import BeautifulSoup
 
-with open("fishy.html") as fp:
+with open("bhartman.html") as fp:
     soup = BeautifulSoup(fp, 'html.parser')
 
 def translate_gear(gear_string):
@@ -46,12 +48,19 @@ def get_haat_squad(roster, haat_squad_set):
     return haat_squad
 
 def get_standard_rebels(roster):
-    standard_rebels_set = {"Princess Leia", "Lando Calrissian", "Biggs Darklighter", "Wedge Antilles", "Admiral Ackbar"}
-    return get_haat_squad(roster, standard_rebels_set)
+    return get_haat_squad(roster, {"Princess Leia", "Lando Calrissian", "Biggs Darklighter", "Wedge Antilles", "Admiral Ackbar"})
 
 def get_tiepatine(roster):
-    standard_rebels_set = {"Emperor Palpatine", "TIE Fighter Pilot", "Royal Guard", "Sun Fac", "Stormtrooper Han"}
-    return get_haat_squad(roster, standard_rebels_set)
+    return get_haat_squad(roster, {"Emperor Palpatine", "TIE Fighter Pilot", "Royal Guard", "Sun Fac", "Stormtrooper Han"})
+
+def get_chirpapatine(roster):
+    return get_haat_squad(roster, {"Emperor Palpatine", "Chief Chirpa", "Royal Guard", "Sun Fac", "Stormtrooper Han"})
+
+def squad_score(squad):
+    score = 0
+    for toon in squad:
+        score += toon[1]
+    return score
 
 roster = get_all_toons()
 
@@ -59,8 +68,18 @@ standard_rebels = get_standard_rebels(roster)
 
 tiepatine = get_tiepatine(roster)
 
-print(standard_rebels)
+chirpatine = get_chirpapatine(roster)
 
-print(tiepatine)
+p3_squads = [
+    (tiepatine, squad_score(tiepatine)),
+    (chirpatine, squad_score(chirpatine))
+]
+
+sorted_by_second = sorted(p3_squads, key=lambda tup: tup[1], reverse=True)
+
+best_p3 = sorted_by_second[0][0]
+
+print(best_p3)
+
 
 
