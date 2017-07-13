@@ -1,5 +1,6 @@
 # BF
 
+
 #  wget -O bf/fishylips.html https://swgoh.gg/u/fishylips/collection/
 #  wget -O bf/bhartman.html https://swgoh.gg/u/bhartman1002/collection/
 #  wget -O bf/xaren.html https://swgoh.gg/u/xarenthariat/collection/
@@ -81,7 +82,7 @@ for file in onlyfiles:
     file_path = join(mypath, file)
     with open(file_path) as fp:
         soup = BeautifulSoup(fp, 'html.parser')
-
+    print(file_path)
     roster = get_all_toons(soup)
 
         #standard_rebels = get_standard_rebels(roster)
