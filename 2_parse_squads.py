@@ -4,6 +4,7 @@
 #  wget -O bf/fishylips.html https://swgoh.gg/u/fishylips/collection/
 #  wget -O bf/bhartman.html https://swgoh.gg/u/bhartman1002/collection/
 #  wget -O bf/xaren.html https://swgoh.gg/u/xarenthariat/collection/
+#  https://swgoh.gg/u/panos1985/collection/
 
 from os import listdir, path
 from os.path import isfile, join
@@ -44,7 +45,12 @@ def get_all_toons(soup):
     all_toon_tuples = []
     for toon in all_toons:
         toon_name = toon.img['alt']
-        gear_level = translate_gear(toon.find(attrs={"class": "char-portrait-full-gear-level"}).string)
+        gear_level_element = toon.find(attrs={"class": "char-portrait-full-gear-level"})
+        if gear_level_element:
+            gear_level = translate_gear(gear_level_element.string)
+        else:
+            gear_level = 1
+        #gear_level = translate_gear(toon.find(attrs={"class": "char-portrait-full-gear-level"}).string)
         not_seven_stars = toon.find_all(attrs={"class": "star-inactive"})
         if not not_seven_stars:
             all_toon_tuples.append((toon_name, gear_level))
@@ -79,10 +85,11 @@ def squad_score(squad):
     return score
 
 for file in onlyfiles:
+    print(path.splitext(file)[0])
+
     file_path = join(mypath, file)
     with open(file_path) as fp:
         soup = BeautifulSoup(fp, 'html.parser')
-    print(file_path)
     roster = get_all_toons(soup)
 
         #standard_rebels = get_standard_rebels(roster)
@@ -96,10 +103,9 @@ for file in onlyfiles:
         (teebotine, squad_score(teebotine)),
     ]
     sorted_by_second = sorted(palpa_squads, key=lambda tup: tup[1], reverse=True)
-    best_palpa = sorted_by_second[0][0]
+    best_palpa = sorted_by_second[0][0] # first of array; and then the first of the tuple
 
     resistance_p3 = get_resistance_p3(roster)
-    print(path.splitext(file)[0])
     print(best_palpa)
     print(resistance_p3)
 
