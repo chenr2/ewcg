@@ -59,6 +59,8 @@ def get_chirpapatine(roster):
 def get_teebotine(roster):
     return get_haat_squad(roster, {"Emperor Palpatine", "Teebo", "Royal Guard", "Sun Fac", "Stormtrooper Han"})
 
+def get_resistance_p3(roster):
+    return get_haat_squad(roster, {"Finn", "Poe Dameron", "R2-D2", "Resistance Trooper", "Resistance Pilot"})
 
 def squad_score(squad):
     score = 0
@@ -76,17 +78,20 @@ chirpatine = get_chirpapatine(roster)
 
 teebotine = get_teebotine(roster)
 
-p3_squads = [
+palpa_squads = [
     (tiepatine, squad_score(tiepatine)),
     (chirpatine, squad_score(chirpatine)),
     (teebotine, squad_score(teebotine)),
 ]
 
-sorted_by_second = sorted(p3_squads, key=lambda tup: tup[1], reverse=True)
+sorted_by_second = sorted(palpa_squads, key=lambda tup: tup[1], reverse=True)
 
-best_p3 = sorted_by_second[0][0]
+best_palpa = sorted_by_second[0][0]
 
-print(best_p3)
+resistance_p3 = get_resistance_p3(roster)
+
+print(best_palpa)
+print(resistance_p3)
 
 
 
