@@ -1,11 +1,3 @@
-# BF
-
-
-#  wget -O bf/fishylips.html https://swgoh.gg/u/fishylips/collection/
-#  wget -O bf/bhartman.html https://swgoh.gg/u/bhartman1002/collection/
-#  wget -O bf/xaren.html https://swgoh.gg/u/xarenthariat/collection/
-#  https://swgoh.gg/u/panos1985/collection/
-
 from os import listdir, path
 from os.path import isfile, join
 
