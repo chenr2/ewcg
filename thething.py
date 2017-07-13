@@ -56,6 +56,10 @@ def get_tiepatine(roster):
 def get_chirpapatine(roster):
     return get_haat_squad(roster, {"Emperor Palpatine", "Chief Chirpa", "Royal Guard", "Sun Fac", "Stormtrooper Han"})
 
+def get_teebotine(roster):
+    return get_haat_squad(roster, {"Emperor Palpatine", "Teebo", "Royal Guard", "Sun Fac", "Stormtrooper Han"})
+
+
 def squad_score(squad):
     score = 0
     for toon in squad:
@@ -70,9 +74,12 @@ tiepatine = get_tiepatine(roster)
 
 chirpatine = get_chirpapatine(roster)
 
+teebotine = get_teebotine(roster)
+
 p3_squads = [
     (tiepatine, squad_score(tiepatine)),
-    (chirpatine, squad_score(chirpatine))
+    (chirpatine, squad_score(chirpatine)),
+    (teebotine, squad_score(teebotine)),
 ]
 
 sorted_by_second = sorted(p3_squads, key=lambda tup: tup[1], reverse=True)
