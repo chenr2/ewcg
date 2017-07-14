@@ -4,7 +4,8 @@ from os import listdir, path
 from os.path import isfile, join
 
 dynamodb = boto3.resource('dynamodb')
-table = dynamodb.Table('toons2')
+table = dynamodb.Table('toons3')
+roster_table = dynamodb.Table('roster')
 
 guild_name = 'Battlefrontiers'
 
@@ -12,6 +13,14 @@ mypath = 'combined'
 onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
 
 from bs4 import BeautifulSoup
+
+def register_member(guild_name, member_name):
+    roster_table.put_item(
+        Item={
+            'guildName': guild_name,
+            'memberName': member_name
+        }
+    )
 
 def insert_toon(guild_name, member_name, toon_name, gear_tier):
     table.put_item(
@@ -97,6 +106,8 @@ both_guilds_p3_squads = []
 
 for file in onlyfiles:
     member_name = path.splitext(file)[0]
+
+    register_member(guild_name, member_name)
 
     file_path = join(mypath, file)
     with open(file_path) as fp:
