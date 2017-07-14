@@ -1,10 +1,27 @@
+import boto3
+
 from os import listdir, path
 from os.path import isfile, join
 
-mypath = 'bf'
+dynamodb = boto3.resource('dynamodb')
+table = dynamodb.Table('toons2')
+
+guild_name = 'Battlefrontiers'
+
+mypath = 'combined'
 onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
 
 from bs4 import BeautifulSoup
+
+def insert_toon(guild_name, member_name, toon_name, gear_tier):
+    table.put_item(
+        Item={
+            'guildName': guild_name,
+            'memberName': member_name,
+            'toonName': toon_name,
+            'gearTier': gear_tier
+        }
+    )
 
 def translate_gear(gear_string):
     if gear_string == "XI":
@@ -42,10 +59,10 @@ def get_all_toons(soup):
             gear_level = translate_gear(gear_level_element.string)
         else:
             gear_level = 1
-        #gear_level = translate_gear(toon.find(attrs={"class": "char-portrait-full-gear-level"}).string)
         not_seven_stars = toon.find_all(attrs={"class": "star-inactive"})
         if not not_seven_stars:
             all_toon_tuples.append((toon_name, gear_level))
+            insert_toon(mypath, member_name, toon_name, gear_level)
     return all_toon_tuples
 
 def get_haat_squad(roster, haat_squad_set):
@@ -76,15 +93,15 @@ def squad_score(squad):
         score += toon[1]
     return score
 
+both_guilds_p3_squads = []
+
 for file in onlyfiles:
-    print(path.splitext(file)[0])
+    member_name = path.splitext(file)[0]
 
     file_path = join(mypath, file)
     with open(file_path) as fp:
         soup = BeautifulSoup(fp, 'html.parser')
     roster = get_all_toons(soup)
-
-        #standard_rebels = get_standard_rebels(roster)
 
     tiepatine = get_tiepatine(roster)
     chirpatine = get_chirpapatine(roster)
@@ -96,9 +113,17 @@ for file in onlyfiles:
     ]
     sorted_by_second = sorted(palpa_squads, key=lambda tup: tup[1], reverse=True)
     best_palpa = sorted_by_second[0][0] # first of array; and then the first of the tuple
+    both_guilds_p3_squads.append((squad_score(best_palpa), member_name, best_palpa))
 
     resistance_p3 = get_resistance_p3(roster)
-    print(best_palpa)
-    print(resistance_p3)
+    both_guilds_p3_squads.append((squad_score(resistance_p3), member_name, resistance_p3))
+#    print(best_palpa)
+#    print(resistance_p3)
 
+sorted_by_strength = sorted(both_guilds_p3_squads, key=lambda tup: tup[0], reverse=True)
+
+#print(sorted_by_strength)
+
+for squad in sorted_by_strength:
+    print(squad)
 
