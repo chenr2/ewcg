@@ -15,7 +15,6 @@ for file in onlyfiles:
 
     file_name = "{}.html".format(guild_name)
     file_path = join(mypath, file_name)
-    print(file_path)
 
     with open(file_path) as fp:
         soup = BeautifulSoup(fp, 'html.parser')
@@ -27,6 +26,8 @@ for file in onlyfiles:
     for link in all_members:
         member_name = link.string
         clean_name = ''.join(e for e in member_name if e.isalnum())
-        member_url = "wget -O {}/{}.html {}{}collection/".format(guild_name, clean_name, base_url, link['href'])
+        member_url = "wget -O rosters/{}/{}.html {}{}collection/".format(guild_name, clean_name, base_url, link['href'])
         print(member_url)
 
+# mkdir -p rosters/battlefrontiers
+# mkdir -p rosters/ewcg

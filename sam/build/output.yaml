@@ -1,0 +1,57 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: SWAP SAM
+Resources:
+  Member:
+    Properties:
+      AttributeDefinitions:
+      - AttributeName: guildName
+        AttributeType: S
+      - AttributeName: memberName
+        AttributeType: S
+      KeySchema:
+      - AttributeName: guildName
+        KeyType: HASH
+      - AttributeName: memberName
+        KeyType: RANGE
+      ProvisionedThroughput:
+        ReadCapacityUnits: 2
+        WriteCapacityUnits: 2
+      TableName: member
+    Type: AWS::DynamoDB::Table
+  RobHaat:
+    Properties:
+      CodeUri: s3://rob-deploy-sam/bc0302d6b7ed859b0d04c75db42501b0
+      Description: haatp3
+      Events:
+        HttpGet:
+          Properties:
+            Method: get
+            Path: haats
+          Type: Api
+      FunctionName: haatp3
+      Handler: index.lambda_handler
+      MemorySize: 128
+      Policies:
+      - AWSLambdaBasicExecutionRole
+      - AmazonDynamoDBFullAccess
+      Runtime: python2.7
+      Timeout: 30
+    Type: AWS::Serverless::Function
+  Roster:
+    Properties:
+      AttributeDefinitions:
+      - AttributeName: memberName
+        AttributeType: S
+      - AttributeName: toonName
+        AttributeType: S
+      KeySchema:
+      - AttributeName: memberName
+        KeyType: HASH
+      - AttributeName: toonName
+        KeyType: RANGE
+      ProvisionedThroughput:
+        ReadCapacityUnits: 2
+        WriteCapacityUnits: 2
+      TableName: roster
+    Type: AWS::DynamoDB::Table
+Transform: AWS::Serverless-2016-10-31
