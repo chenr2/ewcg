@@ -21,31 +21,38 @@ function convertImageName(toonName){
   return 'images/' + toonName + '.png';
 }
 
+function TableCell({ toonName, gearTier }) {
+  const imageContainer = {
+    height:80,
+    width: 80,
+    borderRadius: 40
+  };
+  return (
+    <td>
+        <img src={convertImageName(toonName)} style={imageContainer} /> 
+        <p>{toonName}</p>
+        <p>{gearTier}</p>
+    </td>
+  );
+}
+
+function TableRow(){
+  
+}
+
 class App extends Component {
   render() {
     var rows = [];
-    var imageContainer = {
-      height:80,
-      width: 80,
-      borderRadius: 40
-    };
     for (var i = 0; i < rosters.length; i++ ) {
       rows.push(
         <tr>
           <td>{rosters[i].member}</td>
-          <td>
-              <img src={convertImageName(rosters[i].squad[0].toonName)} style={imageContainer} /> 
-              <p>{rosters[i].squad[0].toonName}</p>
-              <p>{rosters[i].squad[0].gearTier}</p>
-          </td>
-          <td>
-              <img src={convertImageName(rosters[i].squad[1].toonName)} style={imageContainer} /> 
-              <p>{rosters[i].squad[1].toonName}</p> 
-              <p>{rosters[i].squad[1].gearTier}</p>
-          </td>
-          <td>{rosters[i].squad[2].toonName} {rosters[i].squad[2].gearTier}</td>
-          <td>{rosters[i].squad[3] && rosters[i].squad[3].toonName} {rosters[i].squad[3] && rosters[i].squad[3].gearTier}</td>
-          <td>{rosters[i].squad[4] && rosters[i].squad[4].toonName} {rosters[i].squad[4] && rosters[i].squad[4].gearTier}</td>
+          <TableCell toonName={rosters[i].squad[0].toonName} gearTier={rosters[i].squad[0].gearTier} />
+          <TableCell toonName={rosters[i].squad[1].toonName} gearTier={rosters[i].squad[1].gearTier} />
+          <TableCell toonName={rosters[i].squad[2].toonName} gearTier={rosters[i].squad[2].gearTier} />
+          <TableCell toonName={rosters[i].squad[3].toonName} gearTier={rosters[i].squad[3].gearTier} />
+          <TableCell toonName={rosters[i].squad[4].toonName} gearTier={rosters[i].squad[4].gearTier} />
+
         </tr>
       );
     }
