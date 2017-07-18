@@ -21,23 +21,28 @@ function convertImageName(toonName){
   return 'images/' + toonName + '.png';
 }
 
-function TableCell({ toonName, gearTier }) {
+function TableCell({ toon }) {
   const imageContainer = {
     height:80,
     width: 80,
     borderRadius: 40
   };
+  if (!toon) {
+    return (
+      <td></td>
+    );
+  }
   return (
     <td>
-        <img src={convertImageName(toonName)} style={imageContainer} /> 
-        <p>{toonName}</p>
-        <p>{gearTier}</p>
+        <img src={convertImageName(toon.toonName)} style={imageContainer} /> 
+        <p>{toon.toonName}</p>
+        <p>{toon.gearTier}</p>
     </td>
   );
 }
 
 function TableRow(){
-  
+
 }
 
 class App extends Component {
@@ -47,12 +52,11 @@ class App extends Component {
       rows.push(
         <tr>
           <td>{rosters[i].member}</td>
-          <TableCell toonName={rosters[i].squad[0].toonName} gearTier={rosters[i].squad[0].gearTier} />
-          <TableCell toonName={rosters[i].squad[1].toonName} gearTier={rosters[i].squad[1].gearTier} />
-          <TableCell toonName={rosters[i].squad[2].toonName} gearTier={rosters[i].squad[2].gearTier} />
-          <TableCell toonName={rosters[i].squad[3].toonName} gearTier={rosters[i].squad[3].gearTier} />
-          <TableCell toonName={rosters[i].squad[4].toonName} gearTier={rosters[i].squad[4].gearTier} />
-
+          <TableCell toon={rosters[i].squad[0] } />
+          <TableCell toon={rosters[i].squad[1] } />
+          <TableCell toon={rosters[i].squad[2] } />
+          <TableCell toon={rosters[i].squad[3] } />
+          <TableCell toon={rosters[i].squad[4] } />
         </tr>
       );
     }
