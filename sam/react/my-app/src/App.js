@@ -21,11 +21,32 @@ function convertImageName(toonName){
   return 'images/' + toonName + '.png';
 }
 
+function convertGearTierImagePath(gearTier){
+  return 'images/gear-icon-g' + gearTier + '.svg'
+}
+
 function TableCell({ toon }) {
-  const imageContainer = {
-    height:80,
-    width: 80,
-    borderRadius: 40
+  var styles = {
+    imageContainer: {
+      height:80,
+      width: 80,
+      borderRadius: 40,
+      position: 'absolute'
+    },
+    parentContainer: {
+      height:80,
+      width: 80,
+    },
+    tableCellStyle: {
+      height:150,
+      width: 150,    
+    },
+    toonLabel: {
+      fontSize: 14,
+      fontWeight: 'bold',
+      textAlign: 'center',
+      color: '#343434'
+    }
   };
   if (!toon) {
     return (
@@ -33,25 +54,34 @@ function TableCell({ toon }) {
     );
   }
   return (
-    <td>
-        <img src={convertImageName(toon.toonName)} style={imageContainer} /> 
-        <p>{toon.toonName}</p>
-        <p>{toon.gearTier}</p>
+    <td style={ styles.tableCellStyle }>
+        <div style={styles.parentContainer}>
+          <img src={convertImageName(toon.toonName)} style={styles.imageContainer} /> 
+          <img src={convertGearTierImagePath(toon.gearTier)} style={styles.imageContainer} /> 
+        </div>
+        <p style={styles.toonLabel}>{toon.toonName}</p>
     </td>
   );
-}
-
-function TableRow(){
-
 }
 
 class App extends Component {
   render() {
     var rows = [];
+    var styles = {
+      memberLabel: {
+        fontSize: 18,
+        fontWeight: 'bold',
+        textAlign: 'left',
+        color: '#343434',
+        marginLeft: 20
+      },
+    }
     for (var i = 0; i < rosters.length; i++ ) {
       rows.push(
         <tr>
-          <td>{rosters[i].member}</td>
+          <td>
+            <p style={styles.memberLabel}>{rosters[i].member}</p>
+          </td>
           <TableCell toon={rosters[i].squad[0] } />
           <TableCell toon={rosters[i].squad[1] } />
           <TableCell toon={rosters[i].squad[2] } />
