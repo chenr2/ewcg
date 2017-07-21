@@ -25,16 +25,6 @@ function TableCell({toon}) {
             height: 80,
             width: 80,
         },
-        // tableCellStyle: {
-        //   height:150,
-        //   width: 150,
-        // },
-        // toonLabel: {
-        //   fontSize: 14,
-        //   fontWeight: 'bold',
-        //   textAlign: 'center',
-        //   color: '#343434'
-        // }
     };
     if (!toon) {
         return (
@@ -70,6 +60,27 @@ function Squad({haat, styles, ...other}) {
     );
 }
 
+function GuildTable({haat, styles, loading, ...other}){
+    const rows = haat.rosters.map((roster, index) => <Squad haat={roster} styles={styles} key={index}/>);
+    return (
+        <div className="column">
+            <table className='table is-striped'>
+                <thead>
+                <tr>
+                    <th colSpan="6">
+                        <h2 className="title is-3 has-text-centered">{haat.guild}</h2>
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                {rows}
+                </tbody>
+            </table>
+            <Spinner className="container-fluid has-text-centered" spin={loading} spinnerIcon="fa fa-empire fa-10x fa-spin"/>
+        </div>
+    );
+}
+
 class App extends Component {
     constructor() {
         super();
@@ -95,10 +106,7 @@ class App extends Component {
                 marginLeft: 20
             },
         };
-        // this.state.haats.map TODO
-        // yarn build to push
-        const rows = this.state.haats.map((haat, index) => <Squad haat={haat} styles={styles} key={index}/>);
-
+        const guildTables = this.state.haats.map((haat, index) => <GuildTable haat={haat} styles={styles} loading={this.state.loading} key={index}/>);
         return (
             <div className="App">
                 <header className="hero is-dark is-bold is-medium">
@@ -113,38 +121,7 @@ class App extends Component {
                 <section className="section">
                     <div className="container-fluid">
                         <div className='columns'>
-                            <div className="column">
-                                <table className='table is-striped'>
-                                    <thead>
-                                        <tr>
-                                            <th colSpan="6">
-                                                <h2 className="title is-3 has-text-centered">EWCG</h2>
-                                            </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                    {rows}
-                                    </tbody>
-                                </table>
-                                <Spinner className="container-fluid has-text-centered" spin={this.state.loading} spinnerIcon="fa fa-empire fa-10x fa-spin"/>
-
-                            </div>
-                            <div className="column">
-                                <table className='table is-striped'>
-                                    <thead>
-                                        <tr>
-                                            <th colSpan="6">
-                                                <h2 className="title is-3 has-text-centered">Battlefrontiers</h2>
-                                            </th>
-                                        </tr>
-                                    </thead>
-                                <tbody>
-                                    {rows}
-                                    </tbody>
-                                </table>
-                                <Spinner className="container-fluid has-text-centered" spin={this.state.loading} spinnerIcon="fa fa-first-order fa-10x fa-spin"/>
-
-                        </div>
+                            {guildTables}
                         </div>
                     </div>
                 </section>

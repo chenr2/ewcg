@@ -38,10 +38,12 @@ def lambda_handler(event, context):
     dynamodb = boto3.resource('dynamodb')
     table = dynamodb.Table('member')
     toons_table = dynamodb.Table('roster')
-    guilds = ['ewcg']
+    guilds = ['ewcg', 'battlefrontiers']
     
-    both_guilds_p3_squads = []
+    both_guilds_payload = []
+
     for guild_name in guilds:
+        this_guild_p3_squads = []
         response = table.query(
             KeyConditionExpression=Key('guildName').eq(guild_name)
         )
@@ -63,27 +65,27 @@ def lambda_handler(event, context):
             ]
             sorted_by_second = sorted(palpa_squads, key=lambda tup: tup[1], reverse=True)
             best_palpa = sorted_by_second[0][0] # first of array; and then the first of the tuple
-            both_guilds_p3_squads.append({
+            this_guild_p3_squads.append({
               "score": squad_score(best_palpa), 
               "member": member_name, 
               "squad": best_palpa
             })
             resistance_p3 = get_resistance_p3(roster)
-            both_guilds_p3_squads.append({
+            this_guild_p3_squads.append({
               "score": squad_score(resistance_p3),
               "member": member_name,
               "squad": resistance_p3
             })
-#    sorted_by_strength = sorted(both_guilds_p3_squads, key=lambda tup: tup[0], reverse=True)
-    both_guilds_p3_squads.sort(key=extract_score, reverse=True)
-    print(both_guilds_p3_squads)
-#    for squad in sorted_by_strength:
-#        print(squad)
+        this_guild_p3_squads.sort(key=extract_score, reverse=True)
+        both_guilds_payload.append({
+            "guild": guild_name,
+            "rosters": this_guild_p3_squads
+        })
     
     response = {
         "statusCode": 200,
         "headers": { "Access-Control-Allow-Origin": "*" },
-        "body": json.dumps(both_guilds_p3_squads)
+        "body": json.dumps(both_guilds_payload)
     }
 
     return response
