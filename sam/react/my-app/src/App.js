@@ -25,6 +25,7 @@ function TableCell({toon}) {
             height: 80,
             width: 80,
         },
+
     };
     if (!toon) {
         return (
@@ -76,7 +77,6 @@ function GuildTable({haat, styles, loading, ...other}){
                 {rows}
                 </tbody>
             </table>
-            <Spinner className="container-fluid has-text-centered" spin={loading} spinnerIcon="fa fa-empire fa-10x fa-spin"/>
         </div>
     );
 }
@@ -106,7 +106,7 @@ class App extends Component {
                 marginLeft: 20
             },
         };
-        const guildTables = this.state.haats.map((haat, index) => <GuildTable haat={haat} styles={styles} loading={this.state.loading} key={index}/>);
+        const guildTables = this.state.haats.map((haat, index) => <GuildTable haat={haat} styles={styles} loading={true} key={index}/>);
         return (
             <div className="App">
                 <header className="hero is-dark is-bold is-medium">
@@ -120,6 +120,7 @@ class App extends Component {
 
                 <section className="section">
                     <div className="container-fluid">
+                        <Spinner className="container-fluid has-text-centered" spin={this.state.loading} spinnerIcon="fa fa-empire fa-10x fa-spin"/>
                         <div className='columns'>
                             {guildTables}
                         </div>
