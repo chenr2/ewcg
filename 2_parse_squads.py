@@ -114,22 +114,4 @@ for guild_name in folders:
             soup = BeautifulSoup(fp, 'html.parser')
         roster = get_all_toons(soup)
 
-        tiepatine = get_tiepatine(roster)
-        chirpatine = get_chirpapatine(roster)
-        teebotine = get_teebotine(roster)
-        palpa_squads = [
-            (tiepatine, squad_score(tiepatine)),
-            (chirpatine, squad_score(chirpatine)),
-            (teebotine, squad_score(teebotine)),
-        ]
-        sorted_by_second = sorted(palpa_squads, key=lambda tup: tup[1], reverse=True)
-        best_palpa = sorted_by_second[0][0] # first of array; and then the first of the tuple
-        both_guilds_p3_squads.append((squad_score(best_palpa), member_name, best_palpa))
-
-        resistance_p3 = get_resistance_p3(roster)
-        both_guilds_p3_squads.append((squad_score(resistance_p3), member_name, resistance_p3))
-
-sorted_by_strength = sorted(both_guilds_p3_squads, key=lambda tup: tup[0], reverse=True)
-for squad in sorted_by_strength:
-    print(squad)
 
