@@ -57,8 +57,8 @@ def upload_all_toons(soup):
         else:
             gear_level = 1
         not_seven_stars = toon.find_all(attrs={"class": "star-inactive"})
-        if not not_seven_stars:
-            insert_toon(guild_name, member_name, toon_name, gear_level)
+        if not not_seven_stars: # if seven stars
+            insert_toon(member_name, toon_name, gear_level)
 
 def get_haat_squad(roster, haat_squad_set):
     haat_squad = []
