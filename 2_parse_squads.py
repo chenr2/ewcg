@@ -13,13 +13,14 @@ def register_member(guild_name, member_name):
     )
 
 def insert_toon(member_name, toon_name, gear_tier):
-    toon_table.put_item(
-        Item={
-            'memberName': member_name,
-            'toonName': toon_name,
-            'gearTier': gear_tier
-        }
-    )
+    with toon_table.batch_writer(overwrite_by_pkeys=['memberName', 'toonName']) as batch:
+        batch.put_item(
+            Item={
+                'memberName': member_name,
+                'toonName': toon_name,
+                'gearTier': gear_tier
+            }
+        )
 
 def translate_gear(gear_string):
     if gear_string == "XI":
