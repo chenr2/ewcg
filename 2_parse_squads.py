@@ -5,15 +5,15 @@ from os.path import isfile, join
 from bs4 import BeautifulSoup
 
 def register_member(guild_name, member_name):
-    roster_table.put_item(
+    member_table.put_item(
         Item={
             'guildName': guild_name,
             'memberName': member_name
         }
     )
 
-def insert_toon(guild_name, member_name, toon_name, gear_tier):
-    table.put_item(
+def insert_toon(member_name, toon_name, gear_tier):
+    toon_table.put_item(
         Item={
             'memberName': member_name,
             'toonName': toon_name,
@@ -68,10 +68,12 @@ def get_haat_squad(roster, haat_squad_set):
     return haat_squad
 
 dynamodb = boto3.resource('dynamodb')
-table = dynamodb.Table('roster') # the toons
-roster_table = dynamodb.Table('member') # the people
+toon_table = dynamodb.Table('toon') # the toons
+member_table = dynamodb.Table('member') # the people
 
 root_folder = 'rosters'
+# /rosters/battlefrontiers/panos.html
+
 folders = [f for f in listdir(root_folder)]
 for guild_name in folders:
     mypath = "{}/{}".format(root_folder, guild_name)
