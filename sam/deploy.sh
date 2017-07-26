@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BUCKET=rob-deploy-sam
+BUCKET=rob-deploy-sam-dev
 PROFILE=robcornerstone
 
 # make a build directory to store artifacts
@@ -19,7 +19,7 @@ aws cloudformation package                   \
 # the actual deployment step
 aws cloudformation deploy                     \
     --template-file build/output.yaml         \
-    --stack-name rob-deploy-sam               \
+    --stack-name rob-deploy-sam-dev               \
     --capabilities CAPABILITY_IAM             \
     --profile $PROFILE
 

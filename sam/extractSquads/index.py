@@ -2,6 +2,9 @@ import boto3
 from boto3.dynamodb.conditions import Key, Attr
 import json
 
+toon_table_name = 'toon_dev'
+member_table_name = 'member_dev'
+
 def get_haat_squad(roster, haat_squad_set):
     haat_squad = []
     for toon in roster:
@@ -36,21 +39,21 @@ def convert_decimal(json):
 
 def lambda_handler(event, context):
     dynamodb = boto3.resource('dynamodb')
-    table = dynamodb.Table('member')
-    toons_table = dynamodb.Table('roster')
+    member_table = dynamodb.Table(member_table_name)
+    toon_table = dynamodb.Table(toon_table_name)
     guilds = ['ewcg', 'battlefrontiers']
     
     both_guilds_payload = []
 
     for guild_name in guilds:
         this_guild_p3_squads = []
-        response = table.query(
+        response = member_table.query(
             KeyConditionExpression=Key('guildName').eq(guild_name)
         )
         members = response['Items']
         for member in members:
             member_name = member['memberName']
-            response2 = toons_table.query(
+            response2 = toon_table.query(
                 KeyConditionExpression=Key('memberName').eq(member_name)
             )
             roster = response2['Items']

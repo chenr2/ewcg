@@ -4,6 +4,10 @@ from os import listdir, path
 from os.path import isfile, join
 from bs4 import BeautifulSoup
 
+dynamodb = boto3.resource('dynamodb')
+toon_table = dynamodb.Table('toon_dev') # the toons
+member_table = dynamodb.Table('member_dev') # the people
+
 def register_member(guild_name, member_name):
     member_table.put_item(
         Item={
@@ -68,9 +72,6 @@ def get_haat_squad(roster, haat_squad_set):
             haat_squad.append(toon)
     return haat_squad
 
-dynamodb = boto3.resource('dynamodb')
-toon_table = dynamodb.Table('toon') # the toons
-member_table = dynamodb.Table('member') # the people
 
 root_folder = 'rosters'
 # /rosters/battlefrontiers/panos.html

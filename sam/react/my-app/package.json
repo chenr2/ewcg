@@ -15,6 +15,6 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "aws s3 sync build/ s3://rob-testing-haat-thing --profile robcornerstone"
+    "deploy": "aws s3 sync build/ s3://rob-testing-haat-thing-dev --profile robcornerstone"
   }
 }

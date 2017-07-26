@@ -1,11 +1,11 @@
 AWSTemplateFormatVersion: 2010-09-09
 Transform: AWS::Serverless-2016-10-31
-Description: 'SWAP SAM'
+Description: 'SWAP SAM Dev'
 Resources:
   SwapSAM:
     Type: AWS::Serverless::Function
     Properties:
-      FunctionName: haatp3
+      FunctionName: haatp3-dev
       Handler: index.lambda_handler
       Runtime: python2.7
       CodeUri: ./extractSquads
@@ -34,10 +34,10 @@ Resources:
           KeyType: HASH
         - AttributeName: memberName
           KeyType: RANGE
-      TableName: member
+      TableName: member_dev
       ProvisionedThroughput: 
-        ReadCapacityUnits: 2
-        WriteCapacityUnits: 2
+        ReadCapacityUnits: 1
+        WriteCapacityUnits: 1
   Roster:
     Type: AWS::DynamoDB::Table
     Properties: 
@@ -51,7 +51,7 @@ Resources:
           KeyType: HASH
         - AttributeName: toonName
           KeyType: RANGE
-      TableName: roster
+      TableName: roster_dev
       ProvisionedThroughput: 
-        ReadCapacityUnits: 2
-        WriteCapacityUnits: 2
+        ReadCapacityUnits: 1
+        WriteCapacityUnits: 1
