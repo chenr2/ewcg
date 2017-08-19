@@ -51,7 +51,7 @@ Resources:
           KeyType: HASH
         - AttributeName: toonName
           KeyType: RANGE
-      TableName: roster_dev
+      TableName: toon_dev
       ProvisionedThroughput: 
         ReadCapacityUnits: 1
         WriteCapacityUnits: 1
