@@ -46,9 +46,10 @@ function TableCell({toon}) {
     );
 }
 
-function Squad({haat, styles, ...other}) {
+function Squad({haat, styles, rowNum, ...other}) {
     return (
         <tr {...other}>
+            <td>{rowNum + 1}</td>
             <td>
                 <p style={styles.memberLabel}>{haat.member}</p>
             </td>
@@ -62,7 +63,7 @@ function Squad({haat, styles, ...other}) {
 }
 
 function GuildTable({haat, styles, loading, ...other}){
-    const rows = haat.rosters.map((roster, index) => <Squad haat={roster} styles={styles} key={index}/>);
+    const rows = haat.rosters.map((roster, index) => <Squad haat={roster} styles={styles} rowNum={index} key={index} />);
     return (
         <div className="column">
             <table className='table is-striped'>

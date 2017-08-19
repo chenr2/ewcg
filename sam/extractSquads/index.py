@@ -74,17 +74,22 @@ def lambda_handler(event, context):
             ]
             sorted_by_second = sorted(palpa_squads, key=lambda tup: tup[1], reverse=True)
             best_palpa = sorted_by_second[0][0] # first of array; and then the first of the tuple
-            this_guild_p3_squads.append({
-              "score": squad_score(best_palpa), 
-              "member": member_name, 
-              "squad": best_palpa
-            })
+            best_palpa_score = squad_score(best_palpa)
+            if best_palpa_score > 32:
+                print(best_palpa_score)
+                this_guild_p3_squads.append({
+                  "score": best_palpa_score,
+                  "member": member_name,
+                  "squad": best_palpa
+                })
             resistance_p3 = get_resistance_p3(roster)
-            this_guild_p3_squads.append({
-              "score": squad_score(resistance_p3),
-              "member": member_name,
-              "squad": resistance_p3
-            })
+            resistance_score = squad_score(resistance_p3)
+            if resistance_score > 32:
+                this_guild_p3_squads.append({
+                  "score": squad_score(resistance_p3),
+                  "member": member_name,
+                  "squad": resistance_p3
+                })
         this_guild_p3_squads.sort(key=extract_score, reverse=True)
         both_guilds_payload.append({
             "guild": guild_name,
