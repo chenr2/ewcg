@@ -2,90 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9540dbc7-79a7-45a8-87f7-08220568b9a2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rosters/battlefrontiers/MattZulliban.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rosters/battlefrontiers/Pershing.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rosters/battlefrontiers/Reptar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rosters/battlefrontiers/Serdunk.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rosters/battlefrontiers/Talon77.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rosters/battlefrontiers/Turambar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rosters/battlefrontiers/arthren.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rosters/battlefrontiers/kelsai.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rosters/ewcg/69man.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rosters/ewcg/Evilfraggle.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rosters/ewcg/Kilroy.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rosters/ewcg/RalphMorita.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rosters/ewcg/SquishieTomato.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rosters/ewcg/StrykerStark.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rosters/ewcg/WalkerBoh.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rosters/ewcg/drathvega.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rosters/ewcg/madgattis.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/rosters/ewcg/KChizzy.html" afterPath="$PROJECT_DIR$/rosters/ewcg/Collier.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/1_extract_members.py" afterPath="$PROJECT_DIR$/1_extract_members.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/guilds/battlefrontiers.html" afterPath="$PROJECT_DIR$/guilds/battlefrontiers.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/guilds/ewcg.html" afterPath="$PROJECT_DIR$/guilds/ewcg.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/BradHartman.html" afterPath="$PROJECT_DIR$/rosters/battlefrontiers/BradHartman.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/EnkiWan.html" afterPath="$PROJECT_DIR$/rosters/battlefrontiers/EnkiWan.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/Firebug.html" afterPath="$PROJECT_DIR$/rosters/battlefrontiers/Firebug.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/FishyLips.html" afterPath="$PROJECT_DIR$/rosters/battlefrontiers/FishyLips.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/Flashpoint.html" afterPath="$PROJECT_DIR$/rosters/battlefrontiers/Flashpoint.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/Hasaiki.html" afterPath="$PROJECT_DIR$/rosters/battlefrontiers/Hasaiki.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/HoHhoch.html" afterPath="$PROJECT_DIR$/rosters/battlefrontiers/HoHhoch.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/LordZekester.html" afterPath="$PROJECT_DIR$/rosters/battlefrontiers/LordZekester.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/Rathrius.html" afterPath="$PROJECT_DIR$/rosters/battlefrontiers/Rathrius.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/Reznor.html" afterPath="$PROJECT_DIR$/rosters/battlefrontiers/Reznor.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/SquishyPickle.html" afterPath="$PROJECT_DIR$/rosters/battlefrontiers/SquishyPickle.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/StormtrooperRob.html" afterPath="$PROJECT_DIR$/rosters/battlefrontiers/StormtrooperRob.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/TantemaG.html" afterPath="$PROJECT_DIR$/rosters/battlefrontiers/TantemaG.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/Turumbar.html" afterPath="$PROJECT_DIR$/rosters/battlefrontiers/Turumbar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/Xaren.html" afterPath="$PROJECT_DIR$/rosters/battlefrontiers/Xaren.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/ZalandasGosular.html" afterPath="$PROJECT_DIR$/rosters/battlefrontiers/ZalandasGosular.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/jazcamille.html" afterPath="$PROJECT_DIR$/rosters/battlefrontiers/jazcamille.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/jed.html" afterPath="$PROJECT_DIR$/rosters/battlefrontiers/jed.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/panos.html" afterPath="$PROJECT_DIR$/rosters/battlefrontiers/panos.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/reaperk1.html" afterPath="$PROJECT_DIR$/rosters/battlefrontiers/reaperk1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/spinner.html" afterPath="$PROJECT_DIR$/rosters/battlefrontiers/spinner.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/voltage2009.html" afterPath="$PROJECT_DIR$/rosters/battlefrontiers/voltage2009.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/wick3dthoughts.html" afterPath="$PROJECT_DIR$/rosters/battlefrontiers/wick3dthoughts.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/ewcg/Artwalker.html" afterPath="$PROJECT_DIR$/rosters/ewcg/Artwalker.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/ewcg/Ben.html" afterPath="$PROJECT_DIR$/rosters/ewcg/Ben.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/ewcg/BlimpiePrime.html" afterPath="$PROJECT_DIR$/rosters/ewcg/BlimpiePrime.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/ewcg/Combs.html" afterPath="$PROJECT_DIR$/rosters/ewcg/Combs.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/ewcg/Dowsekid.html" afterPath="$PROJECT_DIR$/rosters/ewcg/Dowsekid.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/ewcg/Ender.html" afterPath="$PROJECT_DIR$/rosters/ewcg/Ender.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/ewcg/FammA.html" afterPath="$PROJECT_DIR$/rosters/ewcg/FammA.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/ewcg/Hambone.html" afterPath="$PROJECT_DIR$/rosters/ewcg/Hambone.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/ewcg/Iamcodey.html" afterPath="$PROJECT_DIR$/rosters/ewcg/Iamcodey.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/ewcg/JED.html" afterPath="$PROJECT_DIR$/rosters/ewcg/JED.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/ewcg/Joraxa.html" afterPath="$PROJECT_DIR$/rosters/ewcg/Joraxa.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/ewcg/Juno.html" afterPath="$PROJECT_DIR$/rosters/ewcg/Juno.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/ewcg/Klaven.html" afterPath="$PROJECT_DIR$/rosters/ewcg/Klaven.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/ewcg/Knox2.html" afterPath="$PROJECT_DIR$/rosters/ewcg/Knox2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/ewcg/LaserBrain.html" afterPath="$PROJECT_DIR$/rosters/ewcg/LaserBrain.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/ewcg/Lazerhadden.html" afterPath="$PROJECT_DIR$/rosters/ewcg/Lazerhadden.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/ewcg/LudicrousSpeeed.html" afterPath="$PROJECT_DIR$/rosters/ewcg/LudicrousSpeeed.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/ewcg/Mercury.html" afterPath="$PROJECT_DIR$/rosters/ewcg/Mercury.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/ewcg/Phantomz.html" afterPath="$PROJECT_DIR$/rosters/ewcg/Phantomz.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/ewcg/Revanchist.html" afterPath="$PROJECT_DIR$/rosters/ewcg/Revanchist.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/ewcg/Sad279.html" afterPath="$PROJECT_DIR$/rosters/ewcg/Sad279.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/ewcg/Schlitz.html" afterPath="$PROJECT_DIR$/rosters/ewcg/Schlitz.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/ewcg/Scorpiuscat.html" afterPath="$PROJECT_DIR$/rosters/ewcg/Scorpiuscat.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/ewcg/ShawnSolo.html" afterPath="$PROJECT_DIR$/rosters/ewcg/ShawnSolo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/ewcg/SifoDiaz.html" afterPath="$PROJECT_DIR$/rosters/ewcg/SifoDiaz.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/ewcg/SpaceballsTheFlamethrower.html" afterPath="$PROJECT_DIR$/rosters/ewcg/SpaceballsTheFlamethrower.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/ewcg/Stratefyte.html" afterPath="$PROJECT_DIR$/rosters/ewcg/Stratefyte.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/ewcg/SwiftaGokun.html" afterPath="$PROJECT_DIR$/rosters/ewcg/SwiftaGokun.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/ewcg/SydosMoru.html" afterPath="$PROJECT_DIR$/rosters/ewcg/SydosMoru.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/ewcg/Teng.html" afterPath="$PROJECT_DIR$/rosters/ewcg/Teng.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/ewcg/Vexel.html" afterPath="$PROJECT_DIR$/rosters/ewcg/Vexel.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/ewcg/Wicked1.html" afterPath="$PROJECT_DIR$/rosters/ewcg/Wicked1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/ewcg/Yuyusith.html" afterPath="$PROJECT_DIR$/rosters/ewcg/Yuyusith.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/ewcg/dstelma.html" afterPath="$PROJECT_DIR$/rosters/ewcg/dstelma.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rosters/ewcg/fsgod88.html" afterPath="$PROJECT_DIR$/rosters/ewcg/fsgod88.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sam/extractSquads/index.py" afterPath="$PROJECT_DIR$/sam/extractSquads/index.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sam/react/my-app/src/App.js" afterPath="$PROJECT_DIR$/sam/react/my-app/src/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sam/template.yaml" afterPath="$PROJECT_DIR$/sam/template.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/update_guilds.sh" afterPath="$PROJECT_DIR$/update_guilds.sh" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -132,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sam/react/my-app/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="90" column="73" lean-forward="false" selection-start-line="90" selection-start-column="73" selection-end-line="90" selection-end-column="73" />
+            <state relative-caret-position="1361">
+              <caret line="97" column="0" lean-forward="true" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -144,11 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sam/extractSquads/index.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-944">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="41">
+              <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -157,8 +76,8 @@
       <file leaf-file-name="template.yaml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sam/template.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="42" column="21" lean-forward="false" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
+            <state relative-caret-position="459">
+              <caret line="27" column="24" lean-forward="true" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -175,6 +94,7 @@
         <option value="$PROJECT_DIR$/1_extract_members.py" />
         <option value="$PROJECT_DIR$/sam/template.yaml" />
         <option value="$PROJECT_DIR$/sam/react/my-app/src/App.js" />
+        <option value="$PROJECT_DIR$/sam/extractSquads/index.py" />
       </list>
     </option>
   </component>
@@ -324,12 +244,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1503112840554</updated>
-      <workItem from="1503112841764" duration="1780000" />
+      <workItem from="1503112841764" duration="2811000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1780000" />
+    <option name="totallyTimeSpent" value="2811000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
@@ -398,29 +318,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sam/extractSquads/index.py">
+    <entry file="file://$PROJECT_DIR$/sam/react/my-app/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-944">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="1361">
+          <caret line="97" column="0" lean-forward="true" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sam/template.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="21" lean-forward="false" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
+        <state relative-caret-position="459">
+          <caret line="27" column="24" lean-forward="true" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sam/react/my-app/src/App.js">
+    <entry file="file://$PROJECT_DIR$/sam/extractSquads/index.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="90" column="73" lean-forward="false" selection-start-line="90" selection-start-column="73" selection-end-line="90" selection-end-column="73" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="41">
+          <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>

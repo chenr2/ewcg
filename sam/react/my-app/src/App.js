@@ -88,7 +88,7 @@ class App extends Component {
     }
 
     componentDidMount() {
-        fetch('https://pb2jondbda.execute-api.us-east-1.amazonaws.com/Prod/haats')
+        fetch('https://kl1f1pqty4.execute-api.us-east-1.amazonaws.com/dev/haats')
             .then((response) => response.json())
             .then((responseJson) => {
                 console.log("data: " + JSON.stringify(responseJson));

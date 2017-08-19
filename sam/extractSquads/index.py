@@ -27,17 +27,22 @@ def get_resistance_p3(roster):
 def squad_score(squad):
     score = 0
     for toon in squad:
-        score += toon['gearTier']
+        if toon['toonName'] == "Chief Chirpa" and toon['gearTier'] > 7:
+            score += 10.5
+        else:
+            score += toon['gearTier']
     return int(score)
     
 def extract_score(json):
     return int(json['score'])
 
+# need to cast numbers to Int
 def convert_decimal(json):
     json['gearTier'] = int(json['gearTier'])
     return json
 
 def lambda_handler(event, context):
+    # get handle to table
     dynamodb = boto3.resource('dynamodb')
     member_table = dynamodb.Table(member_table_name)
     toon_table = dynamodb.Table(toon_table_name)
@@ -45,6 +50,7 @@ def lambda_handler(event, context):
     
     both_guilds_payload = []
 
+    # iterate over each guild
     for guild_name in guilds:
         this_guild_p3_squads = []
         response = member_table.query(
