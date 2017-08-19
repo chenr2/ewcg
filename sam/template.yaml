@@ -2,6 +2,24 @@ AWSTemplateFormatVersion: 2010-09-09
 Transform: AWS::Serverless-2016-10-31
 Description: 'SWAP SAM Dev'
 Resources:
+  P3:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: dev
+      DefinitionBody:
+        swagger: 2.0
+        info:
+          title:
+            Ref: AWS::StackName
+        paths:
+          /haats:
+            get:
+              x-amazon-apigateway-integration:
+                httpMethod: POST
+                type: aws_proxy
+                uri:
+                  !Sub arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${SwapSAM.Arn}/invocations
+              responses: {}
   SwapSAM:
     Type: AWS::Serverless::Function
     Properties:
@@ -20,7 +38,9 @@ Resources:
           Type: Api
           Properties:
             Path: haats
-            Method: get 
+            Method: get
+            RestApiId:
+              Ref: P3
   Member:
     Type: AWS::DynamoDB::Table
     Properties: 
