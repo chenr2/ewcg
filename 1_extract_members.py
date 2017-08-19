@@ -1,6 +1,3 @@
-#  wget -O guilds/battlefrontiers.html https://swgoh.gg/g/4226/battlefrontiers/
-#  wget -O guilds/ewcg.html https://swgoh.gg/g/24217/elegantweaponscivilizedguild/
-
 from bs4 import BeautifulSoup
 
 import urllib2
@@ -29,5 +26,3 @@ for file in onlyfiles:
         member_url = "wget -O rosters/{}/{}.html {}{}collection/".format(guild_name, clean_name, base_url, link['href'])
         print(member_url)
 
-# mkdir -p rosters/battlefrontiers
-# mkdir -p rosters/ewcg
