@@ -7,11 +7,15 @@
 1. Run `python 2_parse_squads.py`. This takes a super long time.
 1. Remember to update the API GW endpoint
 
+TODO: add the other p3 squad
 
+TODO: replicate it for P2
 
 TODO: the upload to dynamodb in `2_parse_squads.py` needs to send up in batches. otherwise it takes forever
 
-TODO: incorporate the separate serverless::api so i don't have to click to enable iam integration
+TODO: API GW to Lambda permissions still has an issue
+
+TODO: the react should not be in the sam folder
 
 TODO: everything should be in sam
 
@@ -20,5 +24,3 @@ TODO: why am i performing all these manual steps? can't it be automated?
 TODO: put everything into one folder that populates the database
 
 TODO: get the API GW URL output
-
-TODO: chief chirpa can count as G11

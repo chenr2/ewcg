@@ -1,7 +1,9 @@
+# -*- coding: utf-8 -*-
+
 import boto3
 from boto3.dynamodb.conditions import Key, Attr
 import json
-
+#
 toon_table_name = 'toon_dev'
 member_table_name = 'member_dev'
 
@@ -9,6 +11,8 @@ def get_haat_squad(roster, haat_squad_set):
     haat_squad = []
     for toon in roster:
         if toon['toonName'] in haat_squad_set:
+            haat_squad.append(toon)
+        elif "Chirrut" in toon['toonName'] and "Chirrut" in haat_squad_set:
             haat_squad.append(toon)
     return haat_squad
     
@@ -23,6 +27,9 @@ def get_teebotine(roster):
 
 def get_resistance_p3(roster):
     return get_haat_squad(roster, {"Finn", "Poe Dameron", "R2-D2", "Resistance Trooper", "Resistance Pilot"})
+
+def get_rtfp_p3(roster):
+    return get_haat_squad(roster, {"Teebo", "Jyn Erso", "Baze Malbus", "Chirrut", "TIE Fighter Pilot"})
 
 def squad_score(squad):
     score = 0
@@ -89,6 +96,14 @@ def lambda_handler(event, context):
                   "score": squad_score(resistance_p3),
                   "member": member_name,
                   "squad": resistance_p3
+                })
+            rtfp_p3 = get_rtfp_p3(roster)
+            rtfp_score = squad_score(rtfp_p3)
+            if rtfp_score > 32:
+                this_guild_p3_squads.append({
+                  "score": rtfp_score,
+                  "member": member_name,
+                  "squad": rtfp_p3
                 })
         this_guild_p3_squads.sort(key=extract_score, reverse=True)
         both_guilds_payload.append({
