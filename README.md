@@ -7,7 +7,6 @@
 1. Run `python 2_parse_squads.py`. This takes a super long time.
 1. Remember to update the API GW endpoint
 
-TODO: add the other p3 squad
 
 TODO: replicate it for P2
 

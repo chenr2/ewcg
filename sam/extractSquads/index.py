@@ -31,6 +31,15 @@ def get_resistance_p3(roster):
 def get_rtfp_p3(roster):
     return get_haat_squad(roster, {"Teebo", "Jyn Erso", "Baze Malbus", "Chirrut", "TIE Fighter Pilot"})
 
+def get_droids(roster):
+    return get_haat_squad(roster, {"HK-47", "IG-88", "IG-86 Sentinel Droid", "Jawa Engineer", "Chief Nebit"})
+
+def get_zader_elder(roster):
+    return get_haat_squad(roster, {"Darth Vader", "Darth Sidious", "Tusken Shaman", "Ewok Elder", "Captain Phasma"})
+
+def get_zader_boba(roster):
+    return get_haat_squad(roster, {"Darth Vader", "Darth Sidious", "Tusken Shaman", "Boba Fett", "Captain Phasma"})
+
 def squad_score(squad):
     score = 0
     for toon in squad:
@@ -65,46 +74,80 @@ def lambda_handler(event, context):
         )
         members = response['Items']
         for member in members:
+            # get data
             member_name = member['memberName']
             response2 = toon_table.query(
                 KeyConditionExpression=Key('memberName').eq(member_name)
             )
             roster = response2['Items']
             roster = map(convert_decimal, roster)
-            tiepatine = get_tiepatine(roster)
-            chirpatine = get_chirpapatine(roster)
-            teebotine = get_teebotine(roster)
-            palpa_squads = [
-                (tiepatine, squad_score(tiepatine)),
-                (chirpatine, squad_score(chirpatine)),
-                (teebotine, squad_score(teebotine)),
-            ]
-            sorted_by_second = sorted(palpa_squads, key=lambda tup: tup[1], reverse=True)
-            best_palpa = sorted_by_second[0][0] # first of array; and then the first of the tuple
-            best_palpa_score = squad_score(best_palpa)
-            if best_palpa_score > 32:
-                print(best_palpa_score)
-                this_guild_p3_squads.append({
-                  "score": best_palpa_score,
-                  "member": member_name,
-                  "squad": best_palpa
-                })
-            resistance_p3 = get_resistance_p3(roster)
-            resistance_score = squad_score(resistance_p3)
-            if resistance_score > 32:
-                this_guild_p3_squads.append({
-                  "score": squad_score(resistance_p3),
-                  "member": member_name,
-                  "squad": resistance_p3
-                })
-            rtfp_p3 = get_rtfp_p3(roster)
-            rtfp_score = squad_score(rtfp_p3)
-            if rtfp_score > 32:
-                this_guild_p3_squads.append({
-                  "score": rtfp_score,
-                  "member": member_name,
-                  "squad": rtfp_p3
-                })
+
+            # p2
+            if True:
+                droids = get_droids(roster)
+                best_droid_score = squad_score(droids)
+                if best_droid_score > 32:
+                    this_guild_p3_squads.append({
+                      "score": best_droid_score,
+                      "member": member_name,
+                      "squad": droids
+                    })
+
+                zader_elder = get_zader_elder(roster)
+                zader_boba = get_zader_boba(roster)
+                zader_squads = [
+                    (zader_elder, squad_score(zader_elder)),
+                    (zader_boba, squad_score(zader_boba))
+                ]
+                zader_sorted_by_second = sorted(zader_squads, key=lambda tup: tup[1], reverse=True)
+                best_zader = zader_sorted_by_second[0][0] # first of array; and then the first of the tuple
+                best_zader_score = squad_score(best_zader)
+                if best_zader_score > 32:
+                    this_guild_p3_squads.append({
+                      "score": best_zader_score,
+                      "member": member_name,
+                      "squad": best_zader
+                    })
+
+            # p3
+            if False:
+                # palpatine
+                tiepatine = get_tiepatine(roster)
+                chirpatine = get_chirpapatine(roster)
+                teebotine = get_teebotine(roster)
+                palpa_squads = [
+                    (tiepatine, squad_score(tiepatine)),
+                    (chirpatine, squad_score(chirpatine)),
+                    (teebotine, squad_score(teebotine)),
+                ]
+                sorted_by_second = sorted(palpa_squads, key=lambda tup: tup[1], reverse=True)
+                best_palpa = sorted_by_second[0][0] # first of array; and then the first of the tuple
+                best_palpa_score = squad_score(best_palpa)
+                if best_palpa_score > 32:
+                    this_guild_p3_squads.append({
+                      "score": best_palpa_score,
+                      "member": member_name,
+                      "squad": best_palpa
+                    })
+                # resistance
+                resistance_p3 = get_resistance_p3(roster)
+                resistance_score = squad_score(resistance_p3)
+                if resistance_score > 32:
+                    this_guild_p3_squads.append({
+                      "score": squad_score(resistance_p3),
+                      "member": member_name,
+                      "squad": resistance_p3
+                    })
+                # rogue one
+                rtfp_p3 = get_rtfp_p3(roster)
+                rtfp_score = squad_score(rtfp_p3)
+                if rtfp_score > 32:
+                    this_guild_p3_squads.append({
+                      "score": rtfp_score,
+                      "member": member_name,
+                      "squad": rtfp_p3
+                    })
+
         this_guild_p3_squads.sort(key=extract_score, reverse=True)
         both_guilds_payload.append({
             "guild": guild_name,
