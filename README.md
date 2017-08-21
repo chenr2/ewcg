@@ -8,7 +8,9 @@
 1. Remember to update the API GW endpoint
 
 
-TODO: replicate it for P2
+TODO: measure who has a zylo
+
+TODO: any way for the website to filter by p2 and p3
 
 TODO: the upload to dynamodb in `2_parse_squads.py` needs to send up in batches. otherwise it takes forever
 

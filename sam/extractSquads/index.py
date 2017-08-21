@@ -40,6 +40,12 @@ def get_zader_elder(roster):
 def get_zader_boba(roster):
     return get_haat_squad(roster, {"Darth Vader", "Darth Sidious", "Tusken Shaman", "Boba Fett", "Captain Phasma"})
 
+def get_scavenger_zody(roster):
+    return get_haat_squad(roster, {"CC-2224 \"Cody\"", "CT-5555 \"Fives\"", "CT-21-0408 \"Echo\"", "Clone Sergeant - Phase I", "Jawa Scavenger"})
+
+def get_pathfinder_zody(roster):
+    return get_haat_squad(roster, {"CC-2224 \"Cody\"", "CT-5555 \"Fives\"", "CT-21-0408 \"Echo\"", "Clone Sergeant - Phase I", "Scarif Rebel Pathfinder"})
+
 def squad_score(squad):
     score = 0
     for toon in squad:
@@ -107,6 +113,22 @@ def lambda_handler(event, context):
                       "score": best_zader_score,
                       "member": member_name,
                       "squad": best_zader
+                    })
+
+                scavenger_zody = get_scavenger_zody(roster)
+                pathfinder_zody = get_pathfinder_zody(roster)
+                zody_squads = [
+                    (scavenger_zody, squad_score(scavenger_zody)),
+                    (pathfinder_zody, squad_score(pathfinder_zody))
+                ]
+                zody_sorted_by_second = sorted(zody_squads, key=lambda tup: tup[1], reverse=True)
+                best_zody = zody_sorted_by_second[0][0] # first of array; and then the first of the tuple
+                best_zody_score = squad_score(best_zody)
+                if best_zody_score > 32:
+                    this_guild_p3_squads.append({
+                      "score": best_zody_score,
+                      "member": member_name,
+                      "squad": best_zody
                     })
 
             # p3
