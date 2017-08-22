@@ -113,8 +113,8 @@ class App extends Component {
                 <header className="hero is-dark is-bold is-medium">
                     <div className="hero-body has-text-centered">
                         <div className="container-fluid">
-                            <h1 className="title is-1">HAAT P3 Readiness</h1>
-                            <h2 className="subtitle is-3">comparing your things</h2>
+                            <h1 className="title is-1">HAAT Readiness</h1>
+                            <h2 className="subtitle is-3">P3</h2>
                         </div>
                     </div>
                 </header>
