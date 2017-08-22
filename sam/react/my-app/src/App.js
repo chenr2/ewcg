@@ -6,7 +6,11 @@ import Spinner from './Spinner';
 
 function convertImageName(toonName) {
     toonName = toonName.toLowerCase().replace(/\s/g, '');
-    return 'images/' + toonName + '.png';
+    if (toonName.includes("chirrut")) {
+      return 'images/chirrut.png';
+    } else {
+      return 'images/' + toonName + '.png';
+    }
 }
 
 function convertGearTierImagePath(gearTier) {

@@ -171,6 +171,7 @@ def lambda_handler(event, context):
                       "squad": rtfp_p3
                     })
 
+        this_guild_p2_squads.sort(key=extract_score, reverse=True)
         this_guild_p3_squads.sort(key=extract_score, reverse=True)
         both_guilds_payload.append({
             "guild": guild_name,
