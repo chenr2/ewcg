@@ -74,6 +74,7 @@ def lambda_handler(event, context):
 
     # iterate over each guild
     for guild_name in guilds:
+        this_guild_p2_squads = []
         this_guild_p3_squads = []
         response = member_table.query(
             KeyConditionExpression=Key('guildName').eq(guild_name)
@@ -93,7 +94,7 @@ def lambda_handler(event, context):
                 droids = get_droids(roster)
                 best_droid_score = squad_score(droids)
                 if best_droid_score > 32:
-                    this_guild_p3_squads.append({
+                    this_guild_p2_squads.append({
                       "score": best_droid_score,
                       "member": member_name,
                       "squad": droids
@@ -109,7 +110,7 @@ def lambda_handler(event, context):
                 best_zader = zader_sorted_by_second[0][0] # first of array; and then the first of the tuple
                 best_zader_score = squad_score(best_zader)
                 if best_zader_score > 32:
-                    this_guild_p3_squads.append({
+                    this_guild_p2_squads.append({
                       "score": best_zader_score,
                       "member": member_name,
                       "squad": best_zader
@@ -125,14 +126,14 @@ def lambda_handler(event, context):
                 best_zody = zody_sorted_by_second[0][0] # first of array; and then the first of the tuple
                 best_zody_score = squad_score(best_zody)
                 if best_zody_score > 32:
-                    this_guild_p3_squads.append({
+                    this_guild_p2_squads.append({
                       "score": best_zody_score,
                       "member": member_name,
                       "squad": best_zody
                     })
 
             # p3
-            if False:
+            if True:
                 # palpatine
                 tiepatine = get_tiepatine(roster)
                 chirpatine = get_chirpapatine(roster)
@@ -173,7 +174,8 @@ def lambda_handler(event, context):
         this_guild_p3_squads.sort(key=extract_score, reverse=True)
         both_guilds_payload.append({
             "guild": guild_name,
-            "rosters": this_guild_p3_squads
+            "p2": this_guild_p2_squads,
+            "p3": this_guild_p3_squads
         })
     
     response = {
