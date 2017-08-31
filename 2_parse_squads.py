@@ -16,13 +16,14 @@ def register_member(guild_name, member_name):
         }
     )
 
-def insert_toon(member_name, toon_name, gear_tier):
+def insert_toon(member_name, toon_name, gear_tier, rarity):
     with toon_table.batch_writer(overwrite_by_pkeys=['memberName', 'toonName']) as batch:
         batch.put_item(
             Item={
                 'memberName': member_name,
                 'toonName': toon_name,
-                'gearTier': gear_tier
+                'gearTier': gear_tier,
+                'rarity': rarity
             }
         )
 
@@ -61,10 +62,15 @@ def upload_all_toons(soup):
             gear_level = translate_gear(gear_level_element.string)
         else:
             gear_level = 1
+        rarity = 1
         not_seven_stars = toon.find_all(attrs={"class": "star-inactive"})
         if not not_seven_stars: # if seven stars
-            print((member_name, toon_name, gear_level))
-            insert_toon(member_name, toon_name, gear_level)
+            rarity = 7
+        else:
+            rarity = 7 - len(not_seven_stars)
+        print((member_name, toon_name, gear_level, rarity))
+        insert_toon(member_name, toon_name, gear_level, rarity)
+
 
 def get_haat_squad(roster, haat_squad_set):
     haat_squad = []

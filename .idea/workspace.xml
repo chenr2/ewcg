@@ -2,96 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9540dbc7-79a7-45a8-87f7-08220568b9a2" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/guilds/battlefrontiers.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/BradHartman.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/EnkiWan.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/Firebug.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/FishyLips.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/Flashpoint.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/Hasaiki.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/HoHhoch.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/LordZekester.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/MattZulliban.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/Pershing.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/Rathrius.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/Reptar.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/Reznor.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/Serdunk.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/SquishyPickle.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/StormtrooperRob.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/Talon77.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/TantemaG.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/Turambar.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/Turumbar.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/Xaren.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/ZalandasGosular.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/arthren.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/jazcamille.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/jed.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/kelsai.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/panos.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/reaperk1.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/spinner.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/voltage2009.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/battlefrontiers/wick3dthoughts.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/ewcg/69man.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/ewcg/Artwalker.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/ewcg/Ben.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/ewcg/BlimpiePrime.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/ewcg/Collier.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/ewcg/Combs.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/ewcg/Dowsekid.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/ewcg/Ender.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/ewcg/Evilfraggle.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/ewcg/FammA.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/ewcg/Hambone.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/ewcg/Iamcodey.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/ewcg/JED.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/ewcg/Joraxa.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/ewcg/Juno.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/ewcg/Kilroy.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/ewcg/Klaven.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/ewcg/Knox2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/ewcg/LaserBrain.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/ewcg/Lazerhadden.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/ewcg/LudicrousSpeeed.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/ewcg/Mercury.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/ewcg/Phantomz.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/ewcg/RalphMorita.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/ewcg/Revanchist.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/ewcg/Sad279.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/ewcg/Schlitz.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/ewcg/Scorpiuscat.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/ewcg/ShawnSolo.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/ewcg/SifoDiaz.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/ewcg/SpaceballsTheFlamethrower.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/ewcg/SquishieTomato.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/ewcg/Stratefyte.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/ewcg/StrykerStark.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/ewcg/SwiftaGokun.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/ewcg/SydosMoru.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/ewcg/Teng.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/ewcg/Vexel.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/ewcg/WalkerBoh.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/ewcg/Wicked1.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/ewcg/Yuyusith.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/ewcg/drathvega.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/ewcg/dstelma.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/ewcg/fsgod88.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rosters/ewcg/madgattis.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sam/react/my-app/build/static/js/main.53c3e9da.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sam/react/my-app/build/static/js/main.53c3e9da.js.map" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/1_extract_members.py" afterPath="$PROJECT_DIR$/1_extract_members.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2_parse_squads.py" afterPath="$PROJECT_DIR$/2_parse_squads.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/guilds/ewcg.html" afterPath="$PROJECT_DIR$/guilds/ewcg.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sam/extractSquads/index.py" afterPath="$PROJECT_DIR$/sam/extractSquads/index.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sam/react/my-app/build/asset-manifest.json" afterPath="$PROJECT_DIR$/sam/react/my-app/build/asset-manifest.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sam/react/my-app/build/index.html" afterPath="$PROJECT_DIR$/sam/react/my-app/build/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sam/react/my-app/build/service-worker.js" afterPath="$PROJECT_DIR$/sam/react/my-app/build/service-worker.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sam/react/my-app/src/App.js" afterPath="$PROJECT_DIR$/sam/react/my-app/src/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/update_guilds.sh" afterPath="$PROJECT_DIR$/update_guilds.sh" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -106,7 +18,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="1_extract_members.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="1_extract_members.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/1_extract_members.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="459">
@@ -116,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2_parse_squads.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="2_parse_squads.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/2_parse_squads.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="73" column="21" lean-forward="false" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
+            <state relative-caret-position="458">
+              <caret line="71" column="8" lean-forward="false" selection-start-line="71" selection-start-column="8" selection-end-line="71" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -192,11 +104,11 @@
       <list>
         <option value="$PROJECT_DIR$/sam/template.yaml" />
         <option value="$PROJECT_DIR$/sam/react/my-app/package.json" />
-        <option value="$PROJECT_DIR$/2_parse_squads.py" />
         <option value="$PROJECT_DIR$/sam/react/my-app/src/App.js" />
         <option value="$PROJECT_DIR$/sam/extractSquads/index.py" />
         <option value="$PROJECT_DIR$/update_guilds.sh" />
         <option value="$PROJECT_DIR$/1_extract_members.py" />
+        <option value="$PROJECT_DIR$/2_parse_squads.py" />
       </list>
     </option>
   </component>
@@ -355,12 +267,12 @@
       <workItem from="1503112841764" duration="11034000" />
       <workItem from="1503366040045" duration="3252000" />
       <workItem from="1503445622243" duration="1754000" />
-      <workItem from="1504217460747" duration="733000" />
+      <workItem from="1504217460747" duration="1605000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16773000" />
+    <option name="totallyTimeSpent" value="17645000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
@@ -570,14 +482,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2_parse_squads.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="73" column="21" lean-forward="false" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/update_guilds.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -590,6 +494,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="27" column="22" lean-forward="false" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2_parse_squads.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="71" column="8" lean-forward="false" selection-start-line="71" selection-start-column="8" selection-end-line="71" selection-end-column="8" />
           <folding />
         </state>
       </provider>
