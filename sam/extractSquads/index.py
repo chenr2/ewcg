@@ -185,4 +185,6 @@ def lambda_handler(event, context):
         "body": json.dumps(both_guilds_payload)
     }
 
+
+
     return response

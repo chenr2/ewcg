@@ -21,8 +21,9 @@ for file in onlyfiles:
     base_url = 'https://swgoh.gg'
 
     for link in all_members:
-        member_name = link.string
+        member_name = link.strong.string
         clean_name = ''.join(e for e in member_name if e.isalnum())
         member_url = "wget -O rosters/{}/{}.html {}{}collection/".format(guild_name, clean_name, base_url, link['href'])
         print(member_url)
+        print("sleep 2")
 

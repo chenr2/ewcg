@@ -1,9 +1,10 @@
 # HAAT Readiness
 
 1. Run `./update_guilds.sh`. This saves html files containing the list of guild members in `./guilds`. It also creates some subfolders.
-1. Run `python 1_extract_members.py`. This will output a lot of `wget` commands to the console.
-1. Run the various `wget` commands, in batches of 7 (so the syntax doesn't get mangled). This will download html files for each guild member in their respective guild folders.
+1. Run `python 1_extract_members.py > wget_commands.sh`. This will output a lot of `wget` commands to a script.
+1. Run `./wget_commands.sh`
 1. Delete the CloudFormation stack. This empties the tables. Then run `sam/deploy.sh`
+1. Delete the .DS_STORE files
 1. Run `python 2_parse_squads.py`. This takes a super long time.
 1. Remember to update the API GW endpoint
 1. `npm run start`
