@@ -3,20 +3,6 @@ import './App.css';
 import 'bulma/css/bulma.css';
 import Spinner from './Spinner';
 
-
-function convertImageName(toonName) {
-    toonName = toonName.toLowerCase().replace(/\s/g, '');
-    if (toonName.includes("chirrut")) {
-      return 'images/chirrut.png';
-    } else {
-      return 'images/' + toonName + '.png';
-    }
-}
-
-function convertGearTierImagePath(gearTier) {
-    return 'images/gear-icon-g' + gearTier + '.svg'
-}
-
 function TableCell({toon}) {
     var styles = {
         imageContainer: {
@@ -38,14 +24,7 @@ function TableCell({toon}) {
     }
     return (
         <td>
-            <figure style={styles.parentContainer} className="image">
-                <img src={convertImageName(toon.toonName)} style={styles.imageContainer}/>
-                <img src={convertGearTierImagePath(toon.gearTier)} style={styles.imageContainer}/>
-            </figure>
-            <figcaption>
-                <p style={styles.toonLabel}>{toon.toonName} {toon.rarity}-Star</p>
-            </figcaption>
-
+            <p style={styles.toonLabel}>G{toon.gearTier} {toon.rarity}-Star</p>
         </td>
     );
 }
@@ -66,7 +45,7 @@ function Squad({haat, styles, rowNum, ...other}) {
     );
 }
 
-function GuildTable({haat, styles, loading, phase2, ...other}){
+function GuildTable({haat, styles, loading, toon}){
     const rows = haat.hoth_soldiers.map((roster, index) => <Squad haat={roster} styles={styles} rowNum={index} key={index} />);
     return (
         <div className="column">
@@ -74,7 +53,7 @@ function GuildTable({haat, styles, loading, phase2, ...other}){
                 <thead>
                 <tr>
                     <th colSpan="6">
-                        <h2 className="title is-3 has-text-centered">{haat.guild}</h2>
+                        <h2 className="title is-3 has-text-centered">{toon}</h2>
                     </th>
                 </tr>
                 </thead>
@@ -91,23 +70,23 @@ class App extends Component {
     constructor() {
         super();
         this.state = {
+          toon: "Hoth Rebel Soldier",
           haats: [],
-          loading: true,
-          phase2: true
+          loading: true
         };
     }
 
-    componentDidMount() {
-        fetch('https://kozilxgx0i.execute-api.us-east-1.amazonaws.com/dev/haats')
-            .then((response) => response.json())
-            .then((responseJson) => {
-                console.log("data: " + JSON.stringify(responseJson));
-                this.setState({haats: responseJson, loading: false});
-            });
+    refresh(){
+      fetch('https://kozilxgx0i.execute-api.us-east-1.amazonaws.com/dev/haats/123')
+          .then((response) => response.json())
+          .then((responseJson) => {
+            console.log("data: " + JSON.stringify(responseJson));
+            this.setState({haats: responseJson, loading: false});
+          });
     }
 
-    currentPhase = () => {
-      return this.state.phase2 ? "P2" : "P3"
+    componentDidMount() {
+        this.refresh();
     }
 
     render() {
@@ -120,21 +99,20 @@ class App extends Component {
                 marginLeft: 20
             },
         };
-        const guildTables = this.state.haats.map((haat, index) => <GuildTable haat={haat} styles={styles} loading={true} phase2={this.state.phase2} key={index}/>);
+        const guildTables = this.state.haats.map((haat, index) => <GuildTable haat={haat} styles={styles} loading={true} toon={this.state.toon} key={index}/>);
         return (
             <div className="App">
                 <header className="hero is-dark is-bold is-medium">
                     <div className="hero-body has-text-centered">
                         <div className="container-fluid">
-                            <h1 className="title is-1">HAAT Readiness</h1>
-                            <h2 className="subtitle is-3">{this.state.phase2 ? "P2" : "P3"}</h2>
+                            <h1 className="title is-1">Characters of interest</h1>
                         </div>
                     </div>
                 </header>
 
                 <section className="section">
                     <div className="container-fluid">
-                        <Spinner className="container-fluid has-text-centered" spin={this.state.loading} spinnerIcon="fa fa-empire fa-10x fa-spin"/>
+                        <Spinner className="container-fluid has-text-centered" spin={this.state.loading} spinnerIcon="fa fa-rebel fa-10x fa-spin"/>
                         <div className='columns'>
                             {guildTables}
                         </div>

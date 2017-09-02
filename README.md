@@ -8,7 +8,12 @@
 1. Then run `cd sam && ./deploy.sh`
 1. Run `python 2_parse_squads.py`. This takes a super long time.
 1. Remember to update the API GW endpoint
-1. `npm run start`
+1. `npm run start` to run it locally
+1. `npm run build` to deploy to S3
+
+Note: all AWS related steps require access to Rob's AWS account
+
+URL: http://rob-testing-haat-thing.s3-website-us-east-1.amazonaws.com 
 
 TODO: measure who has a zylo
 
