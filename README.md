@@ -1,4 +1,4 @@
-# HAAT Readiness
+# Platoon Bingo for EWCG
 
 1. Run `./update_guilds.sh`. This saves html files containing the list of guild members in `./guilds`. It also creates some subfolders.
 1. Run `python 1_extract_members.py > wget_commands.sh`. This will output a lot of `wget` commands to a script.

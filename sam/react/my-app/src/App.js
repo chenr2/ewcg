@@ -105,7 +105,7 @@ class App extends Component {
                 <header className="hero is-dark is-bold is-medium">
                     <div className="hero-body has-text-centered">
                         <div className="container-fluid">
-                            <h1 className="title is-1">Characters of interest</h1>
+                            <h1 className="title is-1">Platoon Bingo</h1>
                         </div>
                     </div>
                 </header>
