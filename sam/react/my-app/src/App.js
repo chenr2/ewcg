@@ -70,7 +70,7 @@ class App extends Component {
     constructor() {
         super();
         this.state = {
-          toon: "Hoth Rebel Soldier",
+          toon: "Hoth Rebel Scout",
           haats: [],
           loading: true
         };

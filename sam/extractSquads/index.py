@@ -18,7 +18,7 @@ def get_haat_squad(roster, haat_squad_set):
     return haat_squad
     
 def get_hoth_soldiers(roster):
-    return get_haat_squad(roster, {"Hoth Rebel Soldier"})
+    return get_haat_squad(roster, {"Hoth Rebel Scout"})
 
 def squad_score(squad):
     score = 0
